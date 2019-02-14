@@ -1,0 +1,9 @@
+
+.mx-5 {
+  margin-left: ($spacer * 9.5) !important;
+  margin-right: ($spacer * 9.5) !important;
+}
+.body{
+    color :red;
+    background-color: red;
+}
