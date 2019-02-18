@@ -54,14 +54,14 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="請輸入信箱">
-                                <small id="emailHelp" class="form-text text-muted">請填寫正確的信箱，以利帳號認證</small>
+                                    aria-describedby="emailHelp" placeholder="請輸入信箱" onblur="EmailChecking()">
+                                <small id="emailHelp" class="form-text">請填寫正確的信箱，以利帳號認證</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">密碼</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="請輸入密碼">
-                                    <small id="emailHelp" class="form-text text-muted">請輸入八個字以上的英文數字組合，</small>
+                                    placeholder="請輸入密碼" onblur="PasswordChecing()">
+                                    <small id="passwordHelp" class="form-text">請輸入八個字以上的英文數字組合，</small>
                             </div>
                             <div class="form-group">
                                     <label for="exampleInputPassword1">確認密碼</label>

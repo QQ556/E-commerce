@@ -8,7 +8,7 @@ $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')
 })
 //註冊資料判斷
-function RegisteredChecking() {
+function EmailChecking() {
     var Obj = document.getElementById("exampleInputEmail1");
     var email = Obj.value;
     var i = email.length;
@@ -18,11 +18,15 @@ function RegisteredChecking() {
         if ((i - temp) > 3) {
             if ((i - tempd) > 0) {
                 console.log("信箱對");
+                document.getElementById("emailHelp").innerHTML = "信箱可以使用 !! ";
+                document.getElementById("emailHelp").style.color = "green";
                 return 1;
             }
         }
     }
     console.log("信箱不對");
+    document.getElementById("emailHelp").innerHTML = "信箱錯誤!! 請填寫正確的信箱，以利帳號認證";
+    document.getElementById("emailHelp").style.color = "red";
     return 0;
 }
 //密碼資料判段
@@ -30,20 +34,27 @@ function PasswordChecing() {
     var Obj = document.getElementById("exampleInputPassword1");
     var pwd = Obj.value;
     var i = pwd.length;
-    if(pwd.match(/\d/) && pwd.match(/[a-z]/i) && i>8 && i<20 && !pwd.match(/[^a-z0-9]/)){ 
-        alert('ok'); 
-        }else{ 
-        alert('fail'); 
-        } 
+    if (pwd.match(/\d/) && pwd.match(/[a-z]/i) && i > 8 && i < 20 && !pwd.match(/[^a-z0-9]/)) {
+        console.log("yes");
+        document.getElementById("passwordHelp").innerHTML = "密碼可以使用!!";
+        document.getElementById("passwordHelp").style.color = "green";
+    } else {
+        console.log("no");
+        document.getElementById("passwordHelp").innerHTML = "請輸入八個字以上的英文數字組合，麻煩再次確認 ";
+        document.getElementById("passwordHelp").style.color = "red";
+    }
 }
-//密碼資料再次確認
 function RePassword() {
     var Obj1 = document.getElementById("exampleInputPassword1");
     var pwd1 = Obj1.value;
     var Obj2 = document.getElementById("exampleInputPassword2");
     var pwd2 = Obj2.value;
     if (condition) {
-        if(pwd1 = pwd2)
+        if (pwd1 = pwd2);
+        console.log("密碼驗證正確!");
     }
-    
+    else{
+        console.log("密碼驗證錯誤!");
+    }
+
 }
