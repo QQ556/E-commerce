@@ -53,13 +53,13 @@
                         <form>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <input type="email" class="form-control" id="exampleInputEmail1" name="InputEmail1"
                                     aria-describedby="emailHelp" placeholder="請輸入信箱" onblur="EmailChecking()">
                                 <small id="emailHelp" class="form-text">請填寫正確的信箱，以利帳號認證</small>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">密碼</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="InputPassword1"
                                     placeholder="請輸入密碼" onblur="PasswordChecing()">
                                     <small id="passwordHelp" class="form-text">請輸入八個字以上的英文數字組合，</small>
                             </div>
@@ -72,11 +72,12 @@
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">記住我</label>
                             </div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">註冊</button>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary" onclick="RegisteredChecking()">註冊</button>
+                        
                     </div>
                 </div>
             </div>
