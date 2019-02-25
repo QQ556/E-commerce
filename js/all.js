@@ -1,8 +1,14 @@
+//通知列關閉
+// function closebar() {
+//     var spanObj = document.getElementById("emotion");
+//     spanObj.style.display = "none"
+// }
 $(document).ready(function () {
     $(".closebar").click(function(){
         $(".alert").slideUp(1000);
     });
 });
+
 
 //註冊資料判斷
 function EmailChecking() {
@@ -17,9 +23,6 @@ function EmailChecking() {
                 console.log("信箱對");
                 document.getElementById("emailHelp").innerHTML = "看起來不錯 !! ";
                 document.getElementById("emailHelp").style.color = "green";
-                $(document).ready(function () {
-                    $('.form-group1').addClass('was-validated');
-                });
                 return 1;
             }
         }
@@ -27,9 +30,6 @@ function EmailChecking() {
     console.log("信箱不對");
     document.getElementById("emailHelp").innerHTML = "信箱錯誤!! 請填寫正確的信箱，以利帳號認證";
     document.getElementById("emailHelp").style.color = "red";
-    $(document).ready(function () {
-        $('.form-group1').removeClass('was-validated');
-    });
     return 0;
 }
 //密碼資料判段
@@ -42,21 +42,12 @@ function PasswordChecing() {
         console.log("yes");
         document.getElementById("passwordHelp").innerHTML = "密碼可以使用!!";
         document.getElementById("passwordHelp").style.color = "green";
-        $(document).ready(function () {
-            $('.form-group2').addClass('was-validated');
-        });
-        return 1;
     } else {
         console.log("no");
         document.getElementById("passwordHelp").innerHTML = "請輸入八個字以上的英文數字組合，麻煩再次確認 ";
         document.getElementById("passwordHelp").style.color = "red";
-        $(document).ready(function () {
-            $('.form-group2').removeClass('was-validated');
-        });
-        return 0;
     }
 }
-//檢查密碼驗證
 function RePassword() {
     var Obj1 = document.getElementById("exampleInputPassword1");
     var pwd1 = Obj1.value;
@@ -64,18 +55,9 @@ function RePassword() {
     var pwd2 = Obj2.value;
         if (pwd1 == pwd2){
         console.log("密碼驗證正確!");
-        $(document).ready(function () {
-            $('#repasswordHelp').html('密碼驗證正確!').css('color','green');
-            $('.form-group3').addClass('was-validated');
-        });
-        return 1;
     }
     else{
-        $(document).ready(function () {
-            $('#repasswordHelp').html('密碼驗證錯誤').css('color','red');
-            $('.form-group3').removeClass('was-validated');
-        });
         console.log("密碼驗證錯誤!");
-        return 0;
     }
+
 }
