@@ -17,7 +17,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    <script src="js\all.js">
+        <script src="js\all.js">
     </script>
     <link rel="stylesheet" type="text/css" href="css\main.css">
     </div>
@@ -51,10 +51,11 @@
                     </div>
                     <div class="modal-body">
                         <form>
+                            <span id="alert"></span>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="請輸入信箱">
+                                    aria-describedby="emailHelp" placeholder="請輸入信箱" onblur="RegisteredChecking()">
                                 <small id="emailHelp" class="form-text text-muted">請填寫正確的信箱，以利帳號認證</small>
                             </div>
                             <div class="form-group">
@@ -76,7 +77,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary" onclick="RegisteredChecking()">註冊</button>
+                        <button type="button" class="btn btn-primary">註冊</button>
                     </div>
                 </div>
             </div>
@@ -123,32 +124,6 @@
         <!-- <div class=".container">
         <img src="http://lorempixel.com/output/fashion-q-c-1920-200-7.jpg" class="figure-img img-fluid rounded"
             height=100px>
-    </div> -->
-        <!-- 輪播圖 -->
-        <!-- <div class="col-12 col-md-8">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://lorempixel.com/800/400/technics/1/" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://lorempixel.com/800/400/technics/2/" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://lorempixel.com/800/400/technics/3/" alt="Third slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div> -->
-
         <div class="d-flex justify-content-between mt-4">
             <!-- item -->
             <div class=" list-group col-12 col-md-2">
@@ -274,7 +249,7 @@
             reiciendis esse, ducimus vel debitis voluptates eius aperiam nesciunt maxime doloribus? Ut, tenetur. Dolore
             sapiente odio, modi dolor inventore obcaecati natus? Officia pariatur perspiciatis officiis, reprehenderit
             accusamus voluptates numquam impedit, error aspernatur ab quae ipsa nisi exercitationem fugit architecto
-            repellendus alias dolore. Atque cupiditate deserunt velit blanditiis?</p>
+              repellendus alias dolore. Atque cupiditate deserunt velit blanditiis?</p>
     </div>
 </body>
 

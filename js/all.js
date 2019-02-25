@@ -30,11 +30,11 @@ function PasswordChecing() {
     var Obj = document.getElementById("exampleInputPassword1");
     var pwd = Obj.value;
     var i = pwd.length;
-    if(pwd.match(/\d/) && pwd.match(/[a-z]/i) && i>8 && i<20 && !pwd.match(/[^a-z0-9]/)){ 
-        alert('ok'); 
-        }else{ 
-        alert('fail'); 
-        } 
+    if (pwd.match(/\d/) && pwd.match(/[a-z]/i) && i > 8 && i < 20 && !pwd.match(/[^a-z0-9]/)) {
+        alert('ok');
+    } else {
+        alert('fail');
+    }
 }
 //密碼資料再次確認
 function RePassword() {
@@ -43,7 +43,26 @@ function RePassword() {
     var Obj2 = document.getElementById("exampleInputPassword2");
     var pwd2 = Obj2.value;
     if (condition) {
-        if(pwd1 = pwd2)
+        if (pwd1 = pwd2)
     }
-    
+
 }
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
