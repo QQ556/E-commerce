@@ -1,9 +1,15 @@
-$(document).ready(function () {
-    $(".closebar").click(function(){
-        $(".alert").slideUp(1000);
+//引用
+    $("#exampleInputPassword1,#exampleInputPassword2,#exampleInputEmail1").blur(function () {
+        PasswordChecing();
+        RePassword();
+        openbtn();
     });
 });
-
+//上層提示表
+$(document).ready(function () {
+    $(".closebar").click(function () {
+        $(".alert").slideUp(1000);
+    });
 //註冊資料判斷
 function EmailChecking() {
     var Obj = document.getElementById("exampleInputEmail1");
@@ -33,7 +39,7 @@ function EmailChecking() {
     return 0;
 }
 //密碼資料判段
-var Check = 0 ;
+var Check = 0;
 function PasswordChecing() {
     var Obj = document.getElementById("exampleInputPassword1");
     var pwd = Obj.value;
@@ -62,20 +68,29 @@ function RePassword() {
     var pwd1 = Obj1.value;
     var Obj2 = document.getElementById("exampleInputPassword2");
     var pwd2 = Obj2.value;
-        if (pwd1 == pwd2){
+    if (pwd1 == pwd2) {
         console.log("密碼驗證正確!");
         $(document).ready(function () {
-            $('#repasswordHelp').html('密碼驗證正確!').css('color','green');
+            $('#repasswordHelp').html('密碼驗證正確!').css('color', 'green');
             $('.form-group3').addClass('was-validated');
         });
         return 1;
     }
-    else{
+    else {
         $(document).ready(function () {
-            $('#repasswordHelp').html('密碼驗證錯誤').css('color','red');
+            $('#repasswordHelp').html('密碼驗證錯誤').css('color', 'red');
             $('.form-group3').removeClass('was-validated');
         });
         console.log("密碼驗證錯誤!");
         return 0;
+    }
+}
+function openbtn() {
+    if (EmailChecking() == 1 && PasswordChecing() == 1 && RePassword() == 1) {
+        $("#openbtn").removeClass("disabled");
+        console.log("openbtn ok");
+    }
+    else {
+        console.log("openbtn no");
     }
 }
