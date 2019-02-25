@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的店商網站</title>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -17,9 +18,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script src='https://www.google.com/recaptcha/api.js?render=6LdlkJMUAAAAAN_LtbFsvdFovnWHYNjTH7RlQ2Ii'></script>
   <script src="js\all.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  
+  </script>
   <link rel="stylesheet" type="text/css" href="css\main.css">
+  
   </div>
 </head>
 
@@ -50,24 +54,24 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form  class="needs-validation" novalidate>
               <div class="form-group1">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name="InputEmail1"
-                  aria-describedby="emailHelp" placeholder="請輸入信箱" onblur="EmailChecking()">
+                  aria-describedby="emailHelp" placeholder="請輸入信箱" onblur="EmailChecking();">
                 <small id="emailHelp" class="form-text">請填寫正確的信箱，以利帳號認證</small>
               </div>
               <div class="form-group2">
                 <label for="exampleInputPassword1">密碼</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" name="InputPassword1"
-                  placeholder="請輸入密碼" onblur="PasswordChecing();RePassword()">
+                  placeholder="請輸入密碼" onblur="PasswordChecing();RePassword();">
                 <small id="passwordHelp" class="form-text">請輸入八個字以上的英文數字組合，</small>
               </div>
               <div class="form-group3">
                 <label for="exampleInputPassword1">確認密碼</label>
                 <input type="password" class="form-control" id="exampleInputPassword2" name="InputPassword2"
-                  placeholder="請再次輸入密碼" onblur="PasswordChecing();RePassword()">
-                  <small id="repasswordHelp" class="form-text"></small>
+                  placeholder="請再次輸入密碼" onblur="PasswordChecing();RePassword();">
+                <small id="repasswordHelp" class="form-text"></small>
               </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -76,7 +80,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-            <button type="submit" class="btn btn-primary" disabled>註冊</button>
+            <button id="openbtn" type="submit" class="btn btn-primary disabled" tabindex="-1" role="button"
+              aria-disabled="true">註冊</button>
           </div>
           </form>
         </div>
@@ -275,4 +280,5 @@
         repellendus alias dolore. Atque cupiditate deserunt velit blanditiis?</p>
   </div>
 </body>
+
 </html>
