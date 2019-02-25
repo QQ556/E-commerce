@@ -59,4 +59,5 @@ function RePassword() {
     else{
         console.log("密碼驗證錯誤!");
     }
+
 }
