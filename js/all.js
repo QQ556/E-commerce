@@ -59,19 +59,4 @@ function RePassword() {
     else{
         console.log("密碼驗證錯誤!");
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> parent of 88708d4... 0225
-=======
-
-}
->>>>>>> parent of 88708d4... 0225
-=======
-
-}
->>>>>>> parent of 88708d4... 0225
