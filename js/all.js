@@ -1,9 +1,8 @@
 //引用
-    $("#exampleInputPassword1,#exampleInputPassword2,#exampleInputEmail1").blur(function () {
-        PasswordChecing();
-        RePassword();
-        openbtn();
-    });
+$("#exampleInputPassword1,#exampleInputPassword2,#exampleInputEmail1").blur(function () {
+    PasswordChecing();
+    RePassword();
+    openbtn();
 });
 //上層提示表
 $(document).ready(function () {
