@@ -60,7 +60,12 @@ function RePassword() {
         console.log("密碼驗證錯誤!");
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> parent of 88708d4... 0225
 =======
 
 }
