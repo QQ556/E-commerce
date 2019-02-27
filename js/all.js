@@ -1,4 +1,4 @@
-//引用
+//引用事件 index.php
 $(document).ready(function () {
     $("#exampleInputPassword1,#exampleInputPassword2,#exampleInputEmail1").blur(function () {
         PasswordChecing();
@@ -94,6 +94,7 @@ function RePassword() {
     if (i == 0) {
         $(document).ready(function () {
             $("#repasswordHelp").text("");
+            // $('#register').Attr('disabled');
         });
     }
     else if (pwd1 == pwd2) {
@@ -108,14 +109,37 @@ function RePassword() {
         $(document).ready(function () {
             $('#repasswordHelp').html('密碼驗證錯誤').css('color', 'red');
             $('.form-group3').removeClass('was-validated');
-            $('#register').Attr('disabled');
+            // $('#register').Attr('disabled');
         });
         console.log("密碼驗證錯誤!");
         return 0;
     }
 }
+//打開按鈕
 function openbtn() {
-    if (EmailChecking() == 1 && PasswordChecing() == 1 && RePassword() == 1) {
-        $('#register').removeAttr('disabled');
+    //如果有任何錯誤
+    if (EmailChecking() == 0 || PasswordChecing() == 0 || RePassword() == 0) {
+        $(document).ready(function () {
+            console.log("else if here!!!!!!!!")
+            $('#register').attr('disabled', 'disabled');
+        });
+    }
+    //如果密碼跟信箱通過認證
+    else if (EmailChecking() == 1 && PasswordChecing() == 1) {
+        $(document).ready(function () {
+            console.log("if here")
+            $('#register').removeAttr('disabled');
+        });
+    }
+}
+//提交前檢查一次
+function submitCheck() {
+    if (EmailChecking() == 1 && PasswordChecing() == 1 && RePassword() == 1){
+        console.log("提交")
+        $("#registerform").submit()
+    }
+    else {
+        alert("系統錯誤，請再試一次");
+        window.location.reload(); 
     }
 }
