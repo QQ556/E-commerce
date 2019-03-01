@@ -50,7 +50,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="register.php" method="post">
+                        <form id="registerform" action="register.php" method="post">
                             <div class="form-group1">
                                 <label for="exampleInputEmail1">Email</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" name="InputEmail1" aria-describedby="emailHelp" placeholder="請輸入信箱">
@@ -70,7 +70,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                        <button id="register" type="submit" class="btn btn-primary" disabled>註冊</button>
+                        <button id="register" type="button" class="btn btn-primary" disabled onclick="submitCheck()">註冊</button>
                     </div>
                     </form>
                 </div>
