@@ -246,3 +246,6 @@
 </body>
 
 </html> 
+<?php 
+    phpinfo();
+?>
